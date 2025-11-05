@@ -1,9 +1,20 @@
-
 void setup() {
   size(1200, 500);
   background(7, 52, 87);
+  noLoop();
 }
 
+void spots() {
+  fill(85, 63, 89);
+  noStroke();
+
+  for (int i = 0; i < 400; i++) {
+    float x = random(350, 950);
+    float y = random(160, 330);
+    float s = random(5, 10);
+    ellipse(x, y, s, s);
+  }
+}
 
 void draw() {
   noStroke();
@@ -41,6 +52,7 @@ void draw() {
   stroke(186, 97, 131);
   line(880, 250, 300, 250);
   noStroke();
+  spots();
   fill(181, 98, 117);
   triangle(980, 290, 870, 220, 850, 330);
   fill(122, 102, 128);
