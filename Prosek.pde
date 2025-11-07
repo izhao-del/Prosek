@@ -8,9 +8,18 @@ void spots() {
   fill(85, 63, 89);
   noStroke();
 
+  float cx = 700;
+  float cy = 250;
+  float rx = 800 / 2.0;
+  float ry = 230 / 2.0;
+
+
   for (int i = 0; i < 400; i++) {
-    float x = random(350, 950);
-    float y = random(160, 330);
+    float angle = random(TWO_PI);
+    float r = sqrt(random(1));
+    float x = cx + r * rx * cos(angle);
+    float y = cy + r * ry * sin(angle);
+
     float s = random(5, 10);
     ellipse(x, y, s, s);
   }
